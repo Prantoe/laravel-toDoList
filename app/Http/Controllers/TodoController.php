@@ -62,7 +62,7 @@ class TodoController extends Controller
         $todo = Todo::find($id);
         $todo->delete();
 
-        return redirect('/home');
+        return redirect('/home')->with('message', 'data deleted');
     }
 
     public function complete(Todo $todo)
